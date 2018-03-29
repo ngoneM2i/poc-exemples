@@ -27,6 +27,7 @@ public class ArticleCommandeMain {
 		commande.ajouter(a3);
 		System.out.println(commande.panier[2].titre + " " + commande.panier[2].prix);		
 
+		System.out.println(commande.demanderMontantTotal());
 	}
 
 }

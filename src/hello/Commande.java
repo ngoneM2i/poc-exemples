@@ -14,8 +14,11 @@ public class Commande {
 				
 	}
 
-/*	public void demanderMontantTotal(Commande commande) {
+	public void demanderMontantTotal(Commande commande) {
 		int montantTotal = 0;
-	} */
+		for (int i = 0; i < panier.length; i++) {
+			montantTotal += montantTotal + panier[i].prix;	
+		}
+	} 
 
 }
