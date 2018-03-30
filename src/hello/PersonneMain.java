@@ -3,21 +3,17 @@ package hello;
 public class PersonneMain {
 
 	public static void main(String[] args) {
-		Personne p1 = new Personne();
-		//System.out.println(p1);
-		p1.prenom = "Bob";
-		System.out.println(p1.prenom);
-		p1.nom = "L'éponge";
-		System.out.println(p1.nom);
+		Personne p1 = new Personne("Bob", "L'éponge", 18);
 		
-		// fullname => prenom + " " + nom
-		System.out.println(p1.getFullName());
+		//p1.setPrenom("Bob");
+		System.out.println(p1.getPrenom());
 		
-		Personne p2 = new Personne();
-		//System.out.println(p2);
-		System.out.println(p2.nom);
-		System.out.println(p2.prenom);
-		System.out.println(p2.age);
+		//p1.setNom("L'éponge");
+		System.out.println(p1.getNom());
+		
+		//p1.setAge(18);
+		System.out.println(p1.getAge());
+		
 	}
 
 }

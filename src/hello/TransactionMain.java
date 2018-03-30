@@ -9,21 +9,23 @@ public class TransactionMain {
 		//Créer 4 transactions:
 		//débit: 10, crédit: 20, débit:30, crédit: 15
 		
-		Transaction t1 = new Transaction();
-		t1.type = "debit";
-		t1.amount = 10;
+		Transaction t1 = new Transaction("debit", 20);
+		//t1.setType("debit");
+		//t1.setAmount(20);
 		
-		Transaction t2 = new Transaction();
-		t2.type = "crédit";
-		t2.amount = 20;
+		System.out.println(t1.getType());
 		
-		Transaction t3 = new Transaction();
-		t3.type = "debit";
-		t3.amount = 30;
+		Transaction t2 = new Transaction("debit", 20);
+		//t2.setType("debit");
+		//t2.setAmount(20);
 		
-		Transaction t4 = new Transaction();
-		t4.type = "crédit";
-		t4.amount = 15;
+		Transaction t3 = new Transaction("debit", 20);
+		//t3.setType("debit");
+		//t3.setAmount(20);
+		
+		Transaction t4 = new Transaction("debit", 15);
+		//t4.setType("debit");
+		//t4.setAmount(15);
 		
 		Transaction[] transactions = new Transaction[4];
 		transactions[0] = t1;
@@ -34,10 +36,10 @@ public class TransactionMain {
 		// exercice calculer le total des transactions
 		double total = 0;
 		for (int i = 0; i < transactions.length; i++) {
-			if(transactions[i].type.equals("debit")) {
-				total -= transactions[i].amount;
-			} else if (transactions[i].type.equals("credit")) {
-				total += transactions[i].amount;
+			if(transactions[i].getType().equals("debit")) {
+				total -= transactions[i].getAmount();
+			} else if (transactions[i].getType().equals("credit")) {
+				total += transactions[i].getAmount();
 			} else {
 				System.out.println("type de transaction inconnu - gérer l'erreur plus proprement");
 			}
